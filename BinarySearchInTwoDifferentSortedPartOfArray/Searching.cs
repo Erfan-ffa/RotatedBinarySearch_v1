@@ -41,7 +41,6 @@
                     {
                         last = middle - 1;
                         middle = (first + last) / 2;
-                        int hello =0;
                     }
                 }
             }
