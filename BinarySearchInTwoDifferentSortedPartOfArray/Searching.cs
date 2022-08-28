@@ -7,7 +7,6 @@
             int first = 0;
             int last = nums.Length - 1;
             int middle = (first + last) / 2;
-
             while (true)
             {
                 if (target == nums[middle])
@@ -20,7 +19,7 @@
                 }
                 else if (nums[first] <= nums[middle])
                 {
-                    if (target > nums[first] && target < nums[middle])
+                    if (target >= nums[first] && target < nums[middle])
                     {
                         last = middle - 1;
                         middle = (first + last) / 2;
@@ -33,7 +32,7 @@
                 }
                 else
                 {
-                    if (target > nums[middle] && target < nums[last])
+                    if (target > nums[middle] && target <= nums[last])
                     {
                         first = middle + 1;
                         middle = (first + last) / 2;
@@ -42,6 +41,7 @@
                     {
                         last = middle - 1;
                         middle = (first + last) / 2;
+                        int hello =0;
                     }
                 }
             }
